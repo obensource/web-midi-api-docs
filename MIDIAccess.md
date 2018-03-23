@@ -22,16 +22,16 @@ Essentially, these are the channels by which the browser can send and receive [M
 `MIDIAccess` is a [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)  object returned from an invocation of [`navigator.requestMIDIAccess`](https://webaudio.github.io/web-midi-api/#dom-navigator-requestmidiaccess).
 
 If the promise was resolved, the [navigator interface](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) returns a `MediaAccess` object containing the properties: `inputs`, `outputs`, `sysexEnabled`, and `onstatechange`.
-### .inputs
+#### .inputs
 `MediaAccess.inputs` is a [MIDIInputMap](https://developer.mozilla.org/en-US/docs/Web/API/MIDIInputMap) containing the ports of all available external devices which can send MIDI messages to the `MIDIAccess` interface. This is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)-hybrid which is `read only`, so you cannot use common write-based map functions like `set()`, `clear()`, or `delete()` with it.
-### .outputs
+#### .outputs
 `MediaAccess.outputs` is a [MIDIOutputMap](https://developer.mozilla.org/en-US/docs/Web/API/MIDIOutputMap) containing the ports of all available external devices which can receive MIDI messages from the MIDIAccess interface. This [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)-hybrid also follows the same `read only` constraints as the [`.inputs`](https://github.com/obensource/web-midi-api-docs/new/master#inputs) property.
-### .sysexEnabled
+#### .sysexEnabled
 `MediaAccess.sysexEnabled` contains a `read only` boolean value that specifies if [System Exclusive](https://en.wikipedia.org/wiki/MIDI#System_Exclusive_messages) message support is permitted for a given instance of `MIDIAccess`. Enabling SysEx will introduce inherent [security risks](https://github.com/mozilla/standards-positions/issues/58#issuecomment-369892938) for you, so proceed with caution!
-### .onstatechange
+#### .onstatechange
 `MediaAccess.onstatechange` is an event handler function that returns an [`MIDIConnectionEvent`](https://webaudio.github.io/web-midi-api/#MIDIConnectionEvent) object anytime a new MIDI port is added, or state changes for an existing port.
 
-### Rejection Handling
+## Rejection Handling
 In case of a rejection, you can refer the user to a great [polyfill](https://en.wikipedia.org/wiki/Polyfill_(programming)) so you’re able to use the Web MIDI API. A [MIDI-detector test](http://cwilso.github.io/WebMIDIAPIShim/) can also be used to verify if your browser currently supports it.
 
 If it does not, you can inject this markup into your HTML source code to attain access:
@@ -69,7 +69,7 @@ const onMIDIAccessFailure = (err) {
 }
 ```
 
-### Work with raw MIDI data
+### Working with raw MIDI data
 By looping through the available input values from connected devices, you can pass every message to a handler and begin doing incredible things with MIDI in your browser! Have fun! 🙌
 ```
 const onMIDIAccess = (midiAccessObject) => {
