@@ -32,9 +32,10 @@ If the promise was resolved, the [navigator interface](https://developer.mozilla
 `MediaAccess.onstatechange` is an event handler function that returns an [`MIDIConnectionEvent`](https://webaudio.github.io/web-midi-api/#MIDIConnectionEvent) object anytime a new MIDI port is added, or state changes for an existing port.
 
 ### Rejection Handling
-In case of a rejection, you can refer the user to a great [polyfill](https://en.wikipedia.org/wiki/Polyfill_(programming)) so they’re able to use the Web MIDI API. A [MIDI-detector test](http://cwilso.github.io/WebMIDIAPIShim/) can also be used to verify if your browser currently supports it.
+In case of a rejection, you can refer the user to a great [polyfill](https://en.wikipedia.org/wiki/Polyfill_(programming)) so you’re able to use the Web MIDI API. A [MIDI-detector test](http://cwilso.github.io/WebMIDIAPIShim/) can also be used to verify if your browser currently supports it.
 
 If it does not, you can inject this markup into your HTML source code to attain access:
+
 `<script src='http://cwilso.github.com/WebMIDIAPIShim/build/WebMIDIAPI.min.js'></script>`
 
 ## Example Use
