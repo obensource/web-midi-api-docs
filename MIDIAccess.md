@@ -8,10 +8,8 @@ The available devices are split into two categories: **inputs**, and **outputs**
 
 Essentially, these are the channels by which the browser can send and receive [MIDI messages](https://en.wikipedia.org/wiki/MIDI#Messages) from any external device you choose to interact with. For example: a [MIDI controller](https://en.wikipedia.org/wiki/MIDI_controller), or a [MIDI-enabled application](https://en.wikipedia.org/wiki/MIDI#Software).
 
-
-
 ## 🎉 Try it out! 🎉
-<p data-height="461" data-theme-id="0" data-slug-hash="RMgLor" data-default-tab="js,result" data-user="obensource" data-embed-version="2" data-pen-title="Midi-Access-Demo" class="codepen">See the Pen <a href="https://codepen.io/obensource/pen/RMgLor/">Midi-Access-Demo</a> by Ben Michel (<a href="https://codepen.io/obensource">@obensource</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="461" data-theme-id="0" data-slug-hash="RMgLor" data-default-tab="js,result" data-user="obensource" data-embed-version="2" data-pen-title="Midi-Access-Demo" class="codepen">Try out the <a href="https://codepen.io/obensource/pen/RMgLor/">Midi-Access-Demo</a> by Ben Michel (<a href="https://codepen.io/obensource">@obensource</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 **Note:** MIDI Controller Required
 
@@ -32,16 +30,16 @@ If the promise was resolved, the [navigator interface](https://developer.mozilla
 `MediaAccess.onstatechange` is an event handler function that returns an [`MIDIConnectionEvent`](https://webaudio.github.io/web-midi-api/#MIDIConnectionEvent) object anytime a new MIDI port is added, or state changes for an existing port.
 
 ## Rejection Handling
-In case of a rejection, you can refer the user to a great [polyfill](https://en.wikipedia.org/wiki/Polyfill_(programming)) so you’re able to use the Web MIDI API. A [MIDI-detector test](http://cwilso.github.io/WebMIDIAPIShim/) can also be used to verify if your browser currently supports it.
+In case of a rejection, you can utilize a great [polyfill](https://en.wikipedia.org/wiki/Polyfill_(programming)) so you're able to use the Web MIDI API. A [MIDI-detector test](http://cwilso.github.io/WebMIDIAPIShim/) can also be used to verify if your browser currently supports it.
 
-If it does not, you can inject this markup into your HTML source code to attain access:
+If it does not, this script can be injected into your HTML source code to attain access:
 
 `<script src='http://cwilso.github.com/WebMIDIAPIShim/build/WebMIDIAPI.min.js'></script>`
 
 ## Example Use
 
 ### Simple Access
-Check to see if you browser supports the Web MIDI API, then ask the navigator for `MIDIAccess` and pass the result to your handlers (eg. `onMIDIAccess` & `onMIDIAccessFailure`).
+Check to see if your browser supports the Web MIDI API, then ask the navigator for `MIDIAccess` and pass the result to your handlers (eg. `onMIDIAccess` & `onMIDIAccessFailure`).
 ```
 if (navigator.requestMIDIAccess) {
   navigator.requestMIDIAccess({ sysex: false }).then(onMIDIAccess, onMIDIAccessFailure)
