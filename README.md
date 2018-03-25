@@ -25,5 +25,5 @@ The Web MIDI API is currently only supported by default in [Chromium](https://ww
 |✅|🚫|🚫|✅|🚫|
 
 ## ✋ Current vendor positions on Web MIDI API standardization & implementation
-* **Mozilla**: The [Web MIDI API RFP](https://github.com/mozilla/standards-positions/issues/58) position is still uncertain, primarily due to inherent security vulnerabilities that could be introduced by bringing [SysEx](https://en.wikipedia.org/wiki/MIDI#System_Exclusive_messages) into the web.
+* **Mozilla**: The [Web MIDI API RFP](https://github.com/mozilla/standards-positions/issues/58) position is still uncertain, primarily due to inherent security vulnerabilities that could be introduced by bringing [SysEx](https://en.wikipedia.org/wiki/MIDI#System_Exclusive_messages) messaging into the web.
 * **Microsoft**: After receiving [developer feedback with over 1000 votes](https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/6508429-web-midi-api), the Web MIDI API is currently [not in the implementation roadmap](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webmidiapi/) for Microsoft Edge, Desktop, Mixed Reality, Mobile, or Xbox.
