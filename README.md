@@ -1,5 +1,5 @@
 # User-friendly Web MIDI API Documentation
-<img src="https://i.imgur.com/TUNvH4q.jpg" alt="full-mesh-midi" height="500px" width="500px" />
+<img src="https://i.imgur.com/SDCmLLc.png" alt="full-mesh-midi" width="300px" />
 
 Up-to-date [Web MIDI API](https://webaudio.github.io/web-midi-api/) resources & reference documentation!
 
