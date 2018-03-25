@@ -27,7 +27,7 @@ If the promise was resolved, the [navigator interface](https://developer.mozilla
 #### .sysexEnabled
 `MediaAccess.sysexEnabled` contains a `read only` boolean value that specifies if [System Exclusive](https://en.wikipedia.org/wiki/MIDI#System_Exclusive_messages) message support is permitted for a given instance of `MIDIAccess`. Enabling SysEx will introduce inherent [security risks](https://github.com/mozilla/standards-positions/issues/58#issuecomment-369892938) for you, so proceed with caution!
 #### .onstatechange
-`MediaAccess.onstatechange` is an event handler function that returns an [`MIDIConnectionEvent`](https://webaudio.github.io/web-midi-api/#MIDIConnectionEvent) object anytime a new MIDI port is added, or state changes for an existing port.
+`MediaAccess.onstatechange` is an event handler function that returns an [`MIDIConnectionEvent`](https://webaudio.github.io/web-midi-api/#MIDIConnectionEvent) object anytime a new MIDI port is added, or state changes in an existing port.
 
 ## Rejection Handling
 In case of a rejection, you can utilize a great [polyfill](https://en.wikipedia.org/wiki/Polyfill_(programming)) so you're able to use the Web MIDI API. A [MIDI-detector test](http://cwilso.github.io/WebMIDIAPIShim/) can also be used to verify if your browser currently supports it.
