@@ -1,5 +1,7 @@
-# Up-to-date [Web MIDI API](https://webaudio.github.io/web-midi-api/) Documentation
+# Up-to-date Web MIDI API Documentation
 <img src="https://i.imgur.com/SDCmLLc.png" alt="full-mesh-midi" width="400px" />
+
+Reference documentation for the experimental [Web MIDI API](https://webaudio.github.io/web-midi-api/).
 
 ## ⚙️ API Reference
 * [MIDIAccess](./MIDIAccess.md)
