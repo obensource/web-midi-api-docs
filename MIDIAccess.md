@@ -2,7 +2,7 @@
 Connect your browser and [MIDI](https://en.wikipedia.org/wiki/MIDI) enabled devices with `MIDIAccess`!
 
 ## Definition
-`MIDIAccess` is a [Web MIDI API](https://webaudio.github.io/web-midi-api/) interface that provides methods for listing which connected [MIDI devices](https://en.wikipedia.org/wiki/MIDI_controller) are currently available to your browser, and gives access methods for interconnecting with each device. 
+`MIDIAccess` is the interface of the [Web MIDI API](https://webaudio.github.io/web-midi-api/) that provides methods for listing which connected [MIDI devices](https://en.wikipedia.org/wiki/MIDI_controller) are currently available to your browser, and gives access methods for interconnecting with each device. 
 
 The available devices are split into two categories: **inputs**, and **outputs**.
 
