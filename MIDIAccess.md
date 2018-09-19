@@ -34,13 +34,15 @@ In case of a rejection, you can utilize a great [polyfill](https://en.wikipedia.
 
 If it does not, this script can be injected into your HTML source code to attain access:
 
-`<script src='http://cwilso.github.com/WebMIDIAPIShim/build/WebMIDIAPI.min.js'></script>`
+```html
+<script src='http://cwilso.github.com/WebMIDIAPIShim/build/WebMIDIAPI.min.js'></script>
+```
 
 ## Example Use
 
 ### Simple Access
 Check to see if your browser supports the Web MIDI API, then ask the navigator for `MIDIAccess` and pass the result to your handlers (eg. `onMIDIAccess` & `onMIDIAccessFailure`).
-```
+```js
 if (navigator.requestMIDIAccess) {
   navigator.requestMIDIAccess({ sysex: false }).then(onMIDIAccess, onMIDIAccessFailure)
 } else {
@@ -49,7 +51,7 @@ if (navigator.requestMIDIAccess) {
 ```
 
 If access has been gained, you can begin to use a `MIDIAccess` object!
-```
+```js
 const onMIDIAccess = (midiAccessObject)  => {
   console.log(‘The MIDI Access Object:’, midiAccessObject)
 }
@@ -59,7 +61,7 @@ const onMIDIAccess = (midiAccessObject)  => {
 Errors typically occur in two cases: there are no MIDI devices currently available, or your browser doesn’t support the Web MIDI API.
 
 In any case, handling an error allows you to alert the user of their best available options, and log standard errors:
-```
+```js
 const onMIDIAccessFailure = (err) {
   console.log(`No MIDI devices are available, or the Web MIDI API isn’t supported by this browser.`)
   console.log(`Utilize this Web MIDI API Polyfill in order to use the Web MIDI API: http://cwilso.github.io/WebMIDIAPIShim/`)
@@ -69,7 +71,7 @@ const onMIDIAccessFailure = (err) {
 
 ### Working with raw MIDI data
 By looping through the available input values from connected devices, you can pass every message to a handler and begin doing incredible things with MIDI in your browser! Have fun! 🙌
-```
+```js
 const onMIDIAccess = (midiAccessObject) => {
   let inputs = midiAccessObject.inputs.values()
   for (let input = inputs.next(); input && !input.done; input = inputs.next()) {
