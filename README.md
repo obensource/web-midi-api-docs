@@ -12,17 +12,17 @@ The Web MIDI API is currently only supported by default in [Chromium](https://ww
 ### Desktop
 |[Brave](https://brave.com/)|[Chrome](https://www.google.com/chrome/)|[Chrome Canary](https://www.google.com/chrome/browser/canary.html)|[Chromium](https://www.chromium.org/)|[Edge](https://www.microsoft.com/en-us/windows/microsoft-edge)|[FireFox](https://www.mozilla.org/en-US/firefox/new/)|[Internet Explorer](https://www.microsoft.com/en-us/download/internet-explorer.aspx)|[Opera](https://www.opera.com/)|[Safari](https://www.apple.com/safari/)|[Tor](https://www.torproject.org/projects/torbrowser.html)
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|✅|✅|✅|✅|🚫|🚫|🚫|✅|🚫|🚫|
+|✅|✅|✅|✅|✅|🚫|🚫|✅|🚫|🚫|
 
 ### Android
 |[Android](https://www.android.com/)|[Brave](https://brave.com/)|[Chrome](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en)|[Edge](https://www.microsoft.com/en-us/windows/microsoft-edge-mobile)|[FireFox](https://www.mozilla.org/en-US/firefox/mobile/)|[Opera](https://www.opera.com/mobile/operabrowser)|[Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet)|[Tor](https://www.torproject.org/docs/android.html)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|✅|✅|✅|🚫|🚫|✅|🚫|🚫|
+|✅|✅|✅|🚫|🚫|✅|✅|🚫|
 
 ### iOS
 |[Chrome](https://itunes.apple.com/us/app/google-chrome/id535886823?mt=8)|[Edge](https://www.microsoft.com/en-us/windows/microsoft-edge-mobile)|[FireFox](https://itunes.apple.com/us/app/firefox-web-browser/id989804926?mt=8)|[Opera Mini](https://www.opera.com/mobile/ios)|[VPN + Tor](https://itunes.apple.com/us/app/vpn-tor-browser-private-web/id961073150?mt=8)|
 |:---:|:---:|:---:|:---:|:---:|
-|✅|🚫|🚫|✅|🚫|
+|🚫|🚫|🚫|🚫|🚫|
 
 ## ✋ Current vendor positions on Web MIDI API standardization & implementation
 * **Mozilla**: The [Web MIDI API RFP](https://github.com/mozilla/standards-positions/issues/58) position is still uncertain, primarily due to inherent security vulnerabilities that could be introduced by bringing [SysEx](https://en.wikipedia.org/wiki/MIDI#System_Exclusive_messages) messaging into the web.
